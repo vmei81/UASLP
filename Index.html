@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agente ElevenLabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Script del widget de ElevenLabs -->
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  <!-- Alternativa si no carga: -->
+  <!-- <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script> -->
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    elevenlabs-convai {
+      display: block;
+      width: 100%;
+      height: 100vh; /* ocupa toda la pantalla */
+    }
+
+    /* Reubicar el widget flotante */
+    .elevenlabs-convai-widget {
+      bottom: auto !important;      /* desactiva posición inferior */
+      top: 20px !important;         /* espacio desde arriba */
+      left: 50% !important;         /* lo coloca al centro */
+      transform: translateX(-50%) !important; /* centra exacto */
+      z-index: 9999 !important;     /* asegura que quede visible */
+    }
+  </style>
+</head>
+<body>
+  <!-- Aquí va tu agente (usa tu propio agent-id si cambia en el futuro) -->
+  <elevenlabs-convai agent-id="agent_0101kgmxebcxe1xskpty37ajafgs"></elevenlabs-convai>
+</body>
+</html>
